@@ -8,52 +8,20 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-	<!-- custom CSS -->
-	<link rel="stylesheet" type="text/css" href="css/front_page.css">
+	<!-- JQuery -->
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+
 
 	<title>Planners!!</title>
 </head>
 <body>
-	<!-- Navigation -->
-	<div class="container">
-		<nav class="navbar navbar-light navbar-expand-md bg-light justify-content-between">
-			<div class="container-fluid">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
-					<ul class="navbar-nav">
-						<li class="nav-item active">
-							<a class="nav-link pl-0" href="#">Inicio <span class="sr-only">Inicio</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="about.html">Nosotros</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Catalogo de agendas</a>
-						</li>
-						<!-- <li class="nav-item">
-							<a class="nav-link" href="#">Exteriores</a>
-						</li> -->
-					</ul>
-				</div>
-				<a href="#" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25">
-					<!-- Brand -->
-					<img src="img/brand_logo.png" width="100%" height="100%" alt="">
-				</a>
 
-				<div class="navbar-collapse collapse dual-nav w-50 order-2">
-					<ul class="nav navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href=""><i class="fa fa-twitter"></i></a></li>
-						<li class="nav-item"><a class="nav-link" href=""><i class="fa fa-github"></i></a></li>
-					</ul>
-					<button class="btn btn-outline-danger  my-2 my-sm-0 btn-space" type="submit">Iniciar sesión</button>
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Registro</button>
-				</div>
-			</div>
-		</nav>
-	</div>
-	<!-- end of nav -->
+	<?php 
+	require('shared/_nav_bar.php');
+	?>
 
 	<div class="container">
 		<h1>Hey, it's a great day!</h1>
@@ -113,7 +81,7 @@
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!-- JQuery moved to top -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
