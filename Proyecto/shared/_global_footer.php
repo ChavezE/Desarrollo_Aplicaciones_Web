@@ -8,7 +8,7 @@
 		<div class="col-6 col-md">
 			<h4>Conócenos</h4>
 			<ul class="list-unstyled text-small">
-				<li><a class="text-muted" href="#">Nosotros</a></li>
+				<li><a class="text-muted" href="about.php">Nosotros</a></li>
 				<li><a class="text-muted" href="#">Producto</a></li>
 				<li><a class="text-muted" href="#">Tips</a></li>
 				<li><a class="text-muted" href="#">Contacto</a></li>
