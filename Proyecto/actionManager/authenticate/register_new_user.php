@@ -23,7 +23,7 @@
     // $_SESSION["UserID"] = $query_result;
 
     if($query_result){
-      header("Location: http://localhost/pf/Proyecto");
+      header("Location: http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
       exit();
     }else{
       http_response_code(404);

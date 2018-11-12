@@ -16,7 +16,7 @@
 						<a class="nav-link" href="about.php">Nosotros</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="index.php">Catalogo de agendas</a>
+						<a class="nav-link" href="catalogo.php">Catalogo de agendas</a>
 					</li>
 				</ul>
 			</div>

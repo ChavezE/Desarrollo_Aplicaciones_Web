@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-
+	// PROCESSING LOGIN
 	$("#login_sign_in_btn").on("click", function(event){
 		event.preventDefault();
-		console.log("entre al evento");
+		console.log("login script, processing login");
 
 		var form = $('#sign_in_form');
 
@@ -25,9 +25,11 @@ $(document).ready(function(){
 	});
 
 
-
+	// PROCESSING REGISTRATION
 	$('#login_register_btn').on('click', function(e){
 		e.preventDefault();
+
+		console.log("login script, processing registration");
 
 		var form = $('#register_form');
 
@@ -37,7 +39,7 @@ $(document).ready(function(){
 			data: form.serialize(),
 			success: function(data, status, jqXHR){
 				//window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
-				window.location.replace("http://localhost/pf/Proyecto");
+				window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
 			},
 			error: function(error){
 				console.log(error);
