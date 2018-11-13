@@ -26,15 +26,18 @@
 	require('shared/_nav_bar.php');
 	?>
 
-	<div class="container">
-		<h1>Hey, it's a great day!</h1>
-		<p>Lorem ipsum</p>	
-	</div>
+<!-- 	<section class="jumbotron text-center">
+		<h1 class="jumbotron-heading">Hey, es un buen día, sonríe!</h1>
+		<p class="lead text-muted text-center">-Organized lifestyle-</p>	
+	</section>
+ -->
+
 	
 	<!-- Welcome message -->
 	<div class="container">
+		<h3>Hey, es un buen día, sonríe!</h3>
 		<div class="card mx-auto" style="width: 25rem;">
-			<img class="card-img-top" src="img/coffee.jpg" alt="Card image cap">
+			<img class="card-img-top" src="img/landing2.png" alt="Card image cap">
 			<div class="card-body">
 				<h3 class="card-text text-center">
 					Agendas personalizadas <br>

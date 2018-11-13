@@ -37,28 +37,28 @@
               <div class="col-md-6 mb-3">
                 <label for="name">Nombre</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid first name is required.
+                <div class="reg_validations" id="invalid-feedback-name">
+                  Es requerido un nombre válido.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Apellido</label>
                 <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
+                <div class="reg_validations" id="invalid-feedback-lastname">
+                  Es requerido un apellido válido.
                 </div>
               </div>
             </div>
 
             <div class="mb-3">
-              <label for="username">Correo electrónico</label>
+              <label for="useremail">Correo electrónico</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">@</span>
                 </div>
-                <input type="text" class="form-control" id="username" name="username" placeholder="ejemplo@gmail.com" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                  Your username is required.
+                <input type="text" class="form-control" id="useremail" name="useremail" placeholder="ejemplo@gmail.com" required>
+                <div class="reg_validations" id="invalid-feedback-email" style="width: 100%;">
+                  Tu correo electrónico no es válido.
                 </div>
               </div>
             </div>
@@ -66,8 +66,8 @@
             <div class="mb-3">
               <label for="password">Contraseña</label>
               <input type="text" class="form-control" id="password" name="password" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
+              <div class="reg_validations" id="invalid-feedback-pwd">
+                Contraseña no pueda estar en blanco.
               </div>
             </div>
 
@@ -77,18 +77,13 @@
             </div>
 
             <hr class="mb-4">
-            <button id="login_register_btn" class="btn btn-primary btn-lg btn-block" >Continue to checkout</button>
+            <button id="login_register_btn" class="btn btn-warning btn-lg btn-block" >Completar el registro</button>
           </form>
         </div>
       </div>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">&copy; 2017-2018 MyPlannerMX</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
       </footer>
     </div>
 

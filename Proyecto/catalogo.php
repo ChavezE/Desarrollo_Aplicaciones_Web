@@ -39,26 +39,10 @@
 
 				<div class="row">
 					<?php 
-						// var_dump($planner_array);
 						foreach ($planner_array as &$planner){
-							echo $planner->planerID;
-							echo "<br>";
+							require('shared/_planner_template.php');
 						}
-
-						// for ($i=0; $i < ; $i++) { 
-						// 	# code...
-						// 	require 
-						// }
 					?>
-
-					<div class="col-md-4">
-						
-					</div>
-				</div>
-
-				<div class="row">
-				</div>
-
 			</div>
 		</div>
 

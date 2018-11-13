@@ -15,8 +15,8 @@
 		include '../../dataAccess/userDAO.php';
 		include '../../model/User.php';
 
-    $USER = new User($_POST["username"], $_POST["name"]);
-    $USER->setProps($_POST["username"], $_POST["password"], $_POST["name"], $_POST["lastName"]);
+    $USER = new User($_POST["useremail"], $_POST["name"]);
+    $USER->setProps($_POST["useremail"], $_POST["password"], $_POST["name"], $_POST["lastName"]);
 
 	$query_result = register_user_data($USER);
 	// echo "Numero de rows:".$query_result->num_rows."<br>";
