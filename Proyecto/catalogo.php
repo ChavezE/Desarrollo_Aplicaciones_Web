@@ -16,7 +16,7 @@
 	crossorigin="anonymous"></script>
 
 	<!-- Custom styles for this template -->
-	<link href="css/album.css" rel="stylesheet">
+	<link href="<?php echo BASE_URL;?>css/album.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,49 +38,25 @@
 			<div class="container">
 
 				<div class="row">
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="card-img-top" src="img/catalogo/1.jpg" alt="Card image cap">
-							<div class="card-body">
-								<p class="card-text">Descripción bien mamalona de este planer!</p>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group"></div>
-									<!-- PRECIO -->
-									<small class="text-muted">123$</small>
-								</div>
-							</div>
-						</div>
-					</div>
+					<?php 
+						// var_dump($planner_array);
+						foreach ($planner_array as &$planner){
+							echo $planner->planerID;
+							echo "<br>";
+						}
+
+						// for ($i=0; $i < ; $i++) { 
+						// 	# code...
+						// 	require 
+						// }
+					?>
 
 					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="card-img-top" src="img/catalogo/2.png" alt="Card image cap">
-							<div class="card-body">
-								<p class="card-text">Descripción bien mamalona de este planer!</p>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group"></div>
-									<!-- PRECIO -->
-									<small class="text-muted">123$</small>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="card-img-top" src="img/catalogo/2.jpg" alt="Card image cap">
-							<div class="card-body">
-								<p class="card-text">Descripción bien mamalona de este planer!</p>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group"></div>
-									<!-- PRECIO -->
-									<small class="text-muted">123$</small>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 
 			</div>

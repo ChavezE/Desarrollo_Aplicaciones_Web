@@ -20,7 +20,9 @@
 <body>
 	
 	<?php 
-	require('shared/_nav_bar.php');
+
+		require('actionManager/config.php');
+		require('shared/_nav_bar.php');
 	?>
 
 	<br>
@@ -36,7 +38,7 @@
 					Deyanira Arjona <cite title="Source Title">CEO MyPlannerMX</cite>
 				</footer>
 				<div class="text-center">
-					<a href="catalogo.php" class="btn btn-secondary	">Comienza a comprar</a>
+					<a href="<?php echo BASE_URL;?>actionManager/planners/get_all_planners.php" class="btn btn-secondary	">Comienza a comprar</a>
 				</div>
 			</div>
 		</div>

@@ -18,7 +18,9 @@
 	<title>Planners!!</title>
 </head>
 <body>
-
+	<?php 
+		require('actionManager/config.php');
+ 	?>	
 	<!-- Nav bar -->
 	<?php 
 	require('shared/_nav_bar.php');
