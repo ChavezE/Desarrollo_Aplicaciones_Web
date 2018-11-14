@@ -10,11 +10,9 @@
 	foreach ($planner_array_query as &$planner) {
     	$current_planner = new Planner($planner["PlannerID"], $planner["imagePath"]);
 
-		$current_planner->color = $planner["Color"];
-	  	$current_planner->numOfPages = $planner["numOfPages"];
-		$current_planner->spiralBind = $planner["spiralBind"];
-
-
+    	$current_planner->setProps($planner["price"],$planner["description"], $planner["Color"], 
+    		$planner["numOfPages"], $planner["spiralBind"]);
+       
 		$planner_array[] = $current_planner;
 	}
 

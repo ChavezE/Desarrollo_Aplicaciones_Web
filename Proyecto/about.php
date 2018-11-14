@@ -28,6 +28,7 @@
 	<br>
 	<!-- About us msg -->
 	<div class="container">
+		<h3>Nuestra misión:</h3>
 		<div class="card">
 			<div class="card-body">
 				<p>

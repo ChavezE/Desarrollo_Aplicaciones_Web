@@ -3,3 +3,8 @@
 }
 
 .lh-condensed { line-height: 1.25; }
+
+.reg_validations{
+	color: red;
+	display: none;
+}
