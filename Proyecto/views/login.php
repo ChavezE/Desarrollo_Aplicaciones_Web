@@ -28,10 +28,11 @@
       <form class="form-signin" id="sign_in_form">
         <img class="mb-4" src="../img/brand_logo.png" width="100%" height="100%">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <span class="error-msg">Los datos que ingreso son incorrectos, intente de nuevo</span>
+        <label for="username" class="sr-only">Email address</label>
+        <input type="email" id="username" name="username" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
         <div class="checkbox mb-3">
           <label>
             <input type="checkbox" value="remember-me"> Remember me

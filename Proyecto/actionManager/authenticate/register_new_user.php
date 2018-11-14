@@ -26,7 +26,7 @@
       // header("Location: http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
       exit();
     }else{
-      // http_response_code(404);
+      http_response_code(404);
     	echo "problema con la base de datos";
     }
 
