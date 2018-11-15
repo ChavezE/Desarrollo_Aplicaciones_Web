@@ -8,19 +8,22 @@ $(document).ready(function(){
 
   });
 
-  $('#plannerQuantity').on('focusout', function(e){
-    
+  $('#confirm_order').on('click', function(e){
+    plannerQuantity = 1;
+    if($('#plannerQuantity').val() != "")
+      plannerQuantity = $('#plannerQuantity').val();
 
     $.ajax({
-      url: "../actionManager/authenticate/process_login.php",
+      url: "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/actionManager/orders/create_order.php",
       type : 'POST',
       data: {
-        'planerID' : 1,
-        'quantity' :
+        'plannerID' : $('#plannerID').val(),
+        'quantity' : plannerQuantity,
+        'totalAmount' : $('#totalAmount').html()
       },
       success: function(data, status, jqXHR){
         console.log("Request correcta");
-        window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
+        //window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
 
       }
     });

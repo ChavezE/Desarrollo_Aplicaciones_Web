@@ -15,7 +15,7 @@ $(document).ready(function(){
 		console.log("que pedo");
 
 		$.ajax({
-			url: "actionManager/authenticate/process_logout.php",
+			url: "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/actionManager/authenticate/process_logout.php",
 			type : 'GET',
 			success: function(data, status, jqXHR){
 				window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");

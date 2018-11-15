@@ -2,6 +2,8 @@
 	class Order {
 
     public $orderID;
+		public $userID;
+		public $plannerID;
 		public $Planner;
     public $User;
     public $cost;

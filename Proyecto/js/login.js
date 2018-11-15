@@ -26,7 +26,7 @@ $(document).ready(function(){
 		var form = $('#sign_in_form');
 		if(validation_flag){
 			$.ajax({
-				url: "../actionManager/authenticate/process_login.php",
+				url: "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/actionManager/authenticate/process_login.php",
 				type : 'POST',
 				data: form.serialize(),
 				success: function(data, status, jqXHR){

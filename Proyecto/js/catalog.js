@@ -5,7 +5,7 @@ $(document).ready(function(){
     plannerID = $(this).attr('id');
     // Check if logged in
     $.ajax({
-  		url: "../../actionManager/authenticate/is_user_logged.php",
+  		url: "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/actionManager/authenticate/is_user_logged.php",
   		type: 'GET',
   		success: function(data, status, jqXHR){
         // If the user is logged in
