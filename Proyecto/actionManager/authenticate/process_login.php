@@ -11,16 +11,16 @@
 
   $query_result = retrieve_user_data($user_username, $user_password);
 
-  if($query_result->num_rows == 1){
-    while ($row = $query_result->fetch_assoc()){
-
+  if(count($query_result) == 1){
+    foreach ($query_result as $user ) {
       // Create a session with UserID
-      $_SESSION["UserID"] = $row['UserID'];
-      $_SESSION["UserName"] = $row['Username'];
+      $_SESSION["UserID"] = $user['UserID'];
+      $_SESSION["Username"] = $user['Name'];
     }
+
   } else{
-    //http_response_code(404);
-    //die();
+    http_response_code(404);
+    die();
   }
 
 ?>

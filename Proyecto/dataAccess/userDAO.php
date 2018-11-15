@@ -1,5 +1,5 @@
 <?php
-include 'dbConnection.php';
+include_once 'dbConnection.php';
 
 function retrieve_user_data($email_username, $pwd){
   $db = Database::getConnection();
@@ -8,11 +8,11 @@ function retrieve_user_data($email_username, $pwd){
   $stmt->bindParam(1, $email_username,PDO::PARAM_STR, 255);
   $stmt->bindParam(2, $pwd,PDO::PARAM_STR, 255);
 
-  if (!($result = $db->query($user_query))){
+  if ( !($stmt->execute()) ){
     echo "Ocurrio un error con el query<br>";
   }
 
-  return $result;
+  return $stmt->fetchAll();
 }
 
 function register_user_data(User $newUser){

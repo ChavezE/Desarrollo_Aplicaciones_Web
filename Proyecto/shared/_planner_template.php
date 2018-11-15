@@ -5,7 +5,7 @@
 		<div class="card-body">
 			<p class="card-text"><?php echo $planner->description; ?></p>
 			<div class="d-flex justify-content-between align-items-center">
-				<button type="button" class="btn btn-sm btn-outline-secondary" id="<?php echo $planner->planerID?>">Comprar</button>
+				<button type="button" class="btn btn-sm btn-outline-secondary buy-planner" id="<?php echo $planner->planerID?>">Comprar</button>
 				<div class="btn-group"></div>
 				<!-- PRECIO -->
 				<small class="text-muted"><?php echo "$".$planner->price; ?></small>
@@ -13,5 +13,3 @@
 		</div>
 	</div>
 </div>
-
-

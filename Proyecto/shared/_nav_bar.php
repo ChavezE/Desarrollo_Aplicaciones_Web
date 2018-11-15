@@ -30,8 +30,16 @@
 					<li class="nav-item"><a class="nav-link" href=""><i class="fa fa-twitter"></i></a></li>
 					<li class="nav-item"><a class="nav-link" href=""><i class="fa fa-github"></i></a></li>
 				</ul>
-				<button class="btn btn-outline-danger  my-2 my-sm-0 btn-space" id="init_sesion_btn">Iniciar sesión</button>
-				<button class="btn btn-outline-success my-2 my-sm-0" id="register_btn">Registro</button>
+
+				<?php
+					if(isset($_SESSION["UserID"])){
+						echo "Bienvenido, " . $_SESSION["Username"];
+						echo "<button class=\"btn btn-outline-danger  my-2 my-sm-0 btn-space\" id=\"logout_btn\">Log out</button>";
+					}else{
+						echo "<button class=\"btn btn-outline-danger  my-2 my-sm-0 btn-space\" id=\"init_sesion_btn\">Iniciar sesión</button>";
+						echo "<button class=\"btn btn-outline-success my-2 my-sm-0\" id=\"register_btn\">Registro</button>";
+					}
+				 ?>
 			</div>
 		</div>
 	</nav>

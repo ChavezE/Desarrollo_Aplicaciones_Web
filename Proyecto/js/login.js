@@ -22,14 +22,15 @@ $(document).ready(function(){
 		// 	validation_flag = true;
 		// }
 
-
-
-		if(!validation_flag){
+		validation_flag = true;
+		var form = $('#sign_in_form');
+		if(validation_flag){
 			$.ajax({
 				url: "../actionManager/authenticate/process_login.php",
 				type : 'POST',
 				data: form.serialize(),
 				success: function(data, status, jqXHR){
+					console.log("Request correcta");
 					window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
 
 				},
@@ -39,30 +40,11 @@ $(document).ready(function(){
 					window.location.href = "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/my_404.php";
 
 				}
-			});			
+			});
 		}
 
-		var form = $('#sign_in_form');
 
-<<<<<<< HEAD
-		$.ajax({
-			url: "../actionManager/authenticate/process_login.php",
-			type : 'POST',
-			data: form.serialize(),
-			success: function(data, status, jqXHR){
-				window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
 
-			},
-			error: function(error){
-				console.log(error);
-				// $("body").html(error.responseText);
-				//window.location.href = "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/my_404.php";
-
-			}
-		});
-=======
-
->>>>>>> 001006ff67fe3bcc69248d30e19f4a543dbcd0f4
 	});
 
 
@@ -93,7 +75,7 @@ $(document).ready(function(){
 			errMsg2.style.display = "inline";
 			validation_flag = true;
 		}
-			
+
 		// validar email
 		let errMsg3 = document.getElementById("invalid-feedback-email");
 		var re_mail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -114,7 +96,7 @@ $(document).ready(function(){
 			errMsg4.style.display = "inline";
 			validation_flag = true;
 		}
-			
+
 		if (!validation_flag){
 			var form = $('#register_form');
 
@@ -134,6 +116,7 @@ $(document).ready(function(){
 			});
 		}
 	});
+
 
 });
 

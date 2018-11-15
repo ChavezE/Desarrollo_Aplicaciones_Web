@@ -6,7 +6,7 @@
 		public $price;
 		public $description;
 		public $color;
-	  	public $numOfPages;
+	  public $numOfPages;
 		public $spiralBind;
 
 
@@ -20,7 +20,7 @@
 			$this->description = $description;
 			$this->color = $color;
 			$this->numOfPages = $numOfPages;
-		  	$this->spiralBind = $spiralBind;
+		  $this->spiralBind = $spiralBind;
     }
 
 	}
