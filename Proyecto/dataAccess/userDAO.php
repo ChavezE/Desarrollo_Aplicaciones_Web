@@ -1,6 +1,25 @@
 <?php
 include_once 'dbConnection.php';
 
+function user_exists($email_username){
+  $db = Database::getConnection();
+
+  $stmt = $db->prepare("SELECT * FROM users WHERE Username=?");
+  $stmt->bindParam(1, $email_username,PDO::PARAM_STR, 255);
+
+  if ( !($stmt->execute()) ){
+    echo "Ocurrio un error con el query<br>";
+  }
+
+  $result = $stmt->fetch();
+  if($result !=  false){
+    return true;
+  }else{
+    return false;
+  }
+
+}
+
 function retrieve_user_data($email_username, $pwd){
   $db = Database::getConnection();
 

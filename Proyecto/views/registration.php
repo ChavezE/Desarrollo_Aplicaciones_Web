@@ -57,6 +57,9 @@
                   <span class="input-group-text">@</span>
                 </div>
                 <input type="text" class="form-control" id="useremail" name="useremail" placeholder="ejemplo@gmail.com" required>
+                <div class="reg_validations" id="invalid-email" style="width: 100%;">
+                  El correo electrónico ya fue registrado
+                </div>
                 <div class="reg_validations" id="invalid-feedback-email" style="width: 100%;">
                   Tu correo electrónico no es válido.
                 </div>

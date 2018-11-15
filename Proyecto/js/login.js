@@ -53,8 +53,6 @@ $(document).ready(function(){
 	$('#login_register_btn').on('click', function(e){
 		e.preventDefault();
 
-		console.log("login script, processing registration");
-
 		var validation_flag = false;
 
 		// validar nombre
@@ -98,24 +96,42 @@ $(document).ready(function(){
 			validation_flag = true;
 		}
 
+
 		if (!validation_flag){
 			var form = $('#register_form');
 
 			$.ajax({
-				url: "../actionManager/authenticate/register_new_user.php",
+				url: "../actionManager/authenticate/user_exists.php",
 				type : 'POST',
-				data: form.serialize(),
+				data: {
+					"useremail" : $('#useremail').val()
+				},
 				success: function(data, status, jqXHR){
-					//window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
-					window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
+					$('#invalid-email').hide();
+					$.ajax({
+						url: "../actionManager/authenticate/register_new_user.php",
+						type : 'POST',
+						data: form.serialize(),
+						success: function(data, status, jqXHR){
+							window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
+						},
+						error: function(error){
+							console.log(error);
+							// $("body").html(error.responseText);
+							//window.location.href = "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/my_404.php";
+						}
+					});
+
 				},
 				error: function(error){
-					console.log(error);
-					// $("body").html(error.responseText);
-					//window.location.href = "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/my_404.php";
+					$('#invalid-email').show();
 				}
 			});
-		}
+
+
+
+		} // if(validation_flag)
+
 	});
 
 
