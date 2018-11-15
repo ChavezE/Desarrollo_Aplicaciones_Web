@@ -23,7 +23,7 @@ $(document).ready(function(){
       },
       success: function(data, status, jqXHR){
         console.log("Request correcta");
-        //window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
+        window.location.replace("http://localhost/Desarrollo_Aplicaciones_Web/Proyecto");
 
       }
     });

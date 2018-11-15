@@ -37,7 +37,8 @@ $(document).ready(function(){
 				error: function(error){
 					console.log(error);
 					// $("body").html(error.responseText);
-					window.location.href = "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/my_404.php";
+					//window.location.href = "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/my_404.php";
+					$(".error-msg").show();
 
 				}
 			});

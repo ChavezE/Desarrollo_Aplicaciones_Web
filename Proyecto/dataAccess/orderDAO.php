@@ -3,7 +3,7 @@
 
   function create_order(Order $order){
     $db = Database::getConnection();
-    
+
     $stmt = $db->prepare("INSERT INTO orders (UserID, PlannerID, Cost, Quantity) values (?, ?, ?, ?)");
 
     $stmt->bindParam(1, $order->userID, PDO::PARAM_INT); // UserID
@@ -12,6 +12,39 @@
     $stmt->bindParam(4, $order->quantity, PDO::PARAM_INT); // Quantity
 
     return $stmt->execute();
+  }
+
+  function get_orders_by_userid($userID){
+    $db = Database::getConnection();
+
+    try{
+  		$stmt = $db->prepare("SELECT * FROM orders WHERE UserID = ?");
+
+      $stmt->bindParam(1, $userID, PDO::PARAM_INT); // UserID
+
+  		$stmt->execute();
+
+        // Query data
+  		$orders = $stmt->fetchAll();
+      count($orders);
+      $i = 0;
+      foreach ($orders as $order) {
+        $result[$i] = new Order($order['PlannerID'], $order['UserID']);
+        $result[$i]->orderID = $order['OrderID'];
+        $result[$i]->plannerID = $order['PlannerID'];
+        $result[$i]->userID = $order['UserID'];
+        $result[$i]->cost = $order['Cost'];
+        $result[$i]->quantity = $order['Quantity'];
+        $i += 1;
+      }
+
+      return $result;
+
+  	}catch (PDOException $ex){
+  		echo $ex->getMessage();
+  		die($ex->getMessage());
+  	}
+
   }
 
 ?>

@@ -15,7 +15,7 @@
   			  crossorigin="anonymous"></script>
 
 
-	<title>About</title>
+	<title>Planner Admin</title>
 </head>
 <body>
 <?php
