@@ -24,6 +24,8 @@
 
   		$stmt->execute();
 
+      $result = [];
+
         // Query data
   		$orders = $stmt->fetchAll();
       count($orders);
