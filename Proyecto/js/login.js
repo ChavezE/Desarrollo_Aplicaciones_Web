@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+	// Check if cookie exists then autofill username
+	var cookieExists = getCookie('key');
+
+	if (cookieExists != "") {
+		console.log("Hay una cookie de nombre de usuario");
+		// $('#username').val() = cookieExists;
+		document.getElementById('username').value=cookieExists;
+	}
+
 	// PROCESSING LOGIN
 	$("#login_sign_in_btn").on("click", function(event){
 		event.preventDefault();
@@ -22,6 +31,25 @@ $(document).ready(function(){
 		// 	validation_flag = true;
 		// }
 
+	let cookies = document.cookie;
+	console.log(cookies);
+
+	// guarda la cookie
+	if ($('#remember-me').is(":checked")) {
+		var key = 'key=';
+		key = key + $('#username').val();
+
+		var sentense_cookie = key + '; max-age=3600';
+		document.cookie = sentense_cookie;
+		// console.log("si quiere guardar la sesión");
+	}
+	// elimina la cookie
+	else{
+		document.cookie = 'key=;';
+	}
+
+
+
 		validation_flag = true;
 		var form = $('#sign_in_form');
 		if(validation_flag){
@@ -37,7 +65,7 @@ $(document).ready(function(){
 				error: function(error){
 					console.log(error);
 					// $("body").html(error.responseText);
-					//window.location.href = "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/my_404.php";
+					// window.location.href = "http://localhost/Desarrollo_Aplicaciones_Web/Proyecto/my_404.php";
 					$(".error-msg").show();
 
 				}
@@ -140,4 +168,21 @@ $(document).ready(function(){
 
 function isNullOrWhiteSpace(str) {
   return (!str || str.length === 0 || /^\s*$/.test(str))
+}
+
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }

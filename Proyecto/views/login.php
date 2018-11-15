@@ -27,18 +27,18 @@
     <div class="text-center">
       <form class="form-signin" id="sign_in_form">
         <img class="mb-4" src="../img/brand_logo.png" width="100%" height="100%">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Por favor ingresa tus datos.</h1>
         <span class="error-msg">Los datos que ingreso son incorrectos, intente de nuevo</span>
         <label for="username" class="sr-only">Email address</label>
-        <input type="email" id="username" name="username" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="username" name="username" class="form-control" placeholder="Correo Electrónico" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Contraseña" required>
         <div class="checkbox mb-3">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" value="remember-me" id="remember-me"> Recuerdame la proxima vez.
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" id="login_sign_in_btn">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="login_sign_in_btn">Iniciar Sesión</button>
         <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
       </form>
 
