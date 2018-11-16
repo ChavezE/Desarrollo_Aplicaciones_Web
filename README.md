@@ -11,8 +11,11 @@ Se utilizó PHP con una arquitectura MVP, con vistas parciales y generación de 
 # Estructura
 Proyecto/
 |--- about.php
+
 |--- actionManager
+
 |    |--- authenticate
+
 |    |    |--- is_user_logged.php
 |    |    |--- process_login.php
 |    |    |--- process_logout.php
